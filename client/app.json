@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add-image/add-image",
+    "pages/home/home"
+  ],
+  "window": {
+    "defaultTitle": "图片画廊"
+  }
+}

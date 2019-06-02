@@ -1,0 +1,20 @@
+<view class="page-add-image">
+
+  <view class="add-image">
+    <input class="input-name" data-id='ch_name'  placeholder="菜单中文名" onBlur="onBlur" value="{{ ch_name }}" />
+    <input class="input-name" data-id='url' placeholder="菜单路径" onBlur="onBlur" value="{{ url }}" />
+    <input class="input-name" data-id='en_name' placeholder="菜单英文名" onBlur="onBlur" value="{{ en_name }}" />
+    <view class="attach-image">
+      <view a:if="{{ imageUrl }}">
+        <button class="image-button" hover-class="none" onTap="attach">重新上传图标</button>
+        <image class="attached-image" mode="widthFix" src="{{ imageUrl }}" />
+      </view>
+      <button a:else class="image-button" hover-class="none" onTap="attach">上传图标</button>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="add-button" hover-class="none" onTap="add">添加</button>
+  </view>
+
+</view>

@@ -1,0 +1,37 @@
+<view class="page-home">
+  <view class="btn-area">
+    <navigator url="/pages/home/home" hover-class="navigator-hover">跳转到主页</navigator>
+  </view>
+   
+  <view class="image-list">
+  
+
+    <view a:if="{{ noMenus }}">
+      <view class="placeholder">
+        暂时没有菜单，现在去添加菜单吧。
+      </view>
+    </view>
+
+    <view a:else class="list">
+      <view class="item" a:for="{{ menus }}" a:for-item="item" a:key="*this">
+        <view class="action-wrap">
+          <view class="button rename-button" data-itemId="{{ item._id }}" catchTap="rename">重命名</view>
+          <view class="button delete-button" data-itemId="{{ item._id }}" catchTap="delete">删除</view>
+        </view>
+        <view class="image-wrap " style=''>
+          <image class="image" mode="aspectFit" src="{{ item.imageUrl }}" data-imageUrl="{{ item.imageUrl }}" onTap="preview" />
+        </view>
+        <view class="meta-wrap">
+          <view class="text">{{ item.ch_name }}</view>
+          <view class="otherinfo">{{ item.en_name }}</view>
+          <view class="otherinfo">{{ item.url }}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="footer">
+    <image class="avatar" src="{{ user.user.avatar }}" background-size="cover"/>
+    <button class="add-button" hover-class="none" onTap="add">添加菜单</button>
+  </view>
+</view>

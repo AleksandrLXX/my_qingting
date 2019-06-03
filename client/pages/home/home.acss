@@ -5,8 +5,8 @@
   max-height: 100vh;
   font-size: 32rpx;
   font-weight: 300;
-  padding: 0 40rpx;
   position: relative;
+  
 }
 .am-footer{
   position: absolute;
@@ -14,4 +14,45 @@
   height:17px;
   width:100%;
   left:0;
+}
+.banner{
+    flex-grow:0;
+    padding:0;
+    height:300rpx;
+    overflow: hidden;
+}
+.banner image{
+    margin:0;
+}
+.menu-list{
+    padding:0 40rpx;
+    flex-grow:1;
+    background-position: 50% 50%;
+    background-size: cover;
+    
+}
+.header{
+  padding: 10rpx 20rpx;
+  font-size: 48rpx;
+  text-align: center;
+  background-color:#2382d8;
+}
+
+.logo {
+  float:left;
+  display: inline-block;
+  width: 96rpx;
+  height: 96rpx;
+  margin-left:50rpx;
+  background-color: #DDD;
+  align-self: center;
+  border-radius: 50%;
+}
+.hos-name{
+    line-height: 96rpx;
+    text-indent:30rpx;
+    color:#fff;
+    font-weight: 500;
+    text-align: left;
+    font-family:'隶书','PingFang SC';
 }
